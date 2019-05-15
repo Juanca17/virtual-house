@@ -107,8 +107,7 @@
   					<div class="single-footer-widget">
   						<h6>About Us</h6>
   						<p>
-  							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-  							magna aliqua.
+  							©Virtual House, 2019
   						</p>
   					</div>
   				</div>
@@ -192,7 +191,7 @@
               <td>
                   <div class="checkout_btn_inner d-flex align-items-center">
                       <a class="gray_btn" href="#">Continue Shopping</a>
-                      <a class="primary-btn" href="#">Proceed to checkout</a>
+                      <a class="primary-btn" href="index.php">Proceed to checkout</a>
                   </div>
               </td>
           </tr>

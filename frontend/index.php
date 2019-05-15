@@ -73,8 +73,17 @@
 						<div class="col-lg-5 col-md-6">
 							<div class="banner-content">
 								<h1>Furniture like never before!</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+								<p style="    margin-bottom: 20px;">Fill your house with what you really need.</p>
+									<a href="showroom.html"
+										style="
+    									color: #ffffff;
+    									text-decoration: none;
+    									background-color: transparent;
+    									-webkit-text-decoration-skip: objects;
+    									padding: 10px;
+    									border-radius: 20px;
+    									background: #ff6d00;">VIEW SHOWROOM
+									</a>
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -110,7 +119,7 @@
 							<img src="img/features/f-icon2.png" alt="">
 						</div>
 						<h6>Return Policy</h6>
-						<p>Free Shipping on all order</p>
+						<p>One year warranty</p>
 					</div>
 				</div>
 				<!-- single features -->
@@ -120,7 +129,7 @@
 							<img src="img/features/f-icon3.png" alt="">
 						</div>
 						<h6>24/7 Support</h6>
-						<p>Free Shipping on all order</p>
+						<p>We are here to help you</p>
 					</div>
 				</div>
 				<!-- single features -->
@@ -144,9 +153,7 @@
 			<div class="col-lg-6 text-center">
 				<div class="section-title">
 					<h1>Our Products</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore
-						magna aliqua.</p>
+					<p>Check out the first generation of virtual furniture!</p>
 				</div>
 			</div>
 		</div>
@@ -164,8 +171,10 @@
 						<div class="prd-bottom">
 
 							<div class="social-info" id="item-1">
-								<span class="ti-shopping-cart"></span>
-								<p class="hover-text">to cart</p>
+								<a href="cart.php">
+									<span class="ti-shopping-cart"></span>
+									<p class="hover-text">to cart</p>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -183,8 +192,10 @@
 						<div class="prd-bottom">
 
 							<div class="social-info" id="item-2">
-								<span class="ti-shopping-cart"></span>
-								<p class="hover-text">to cart</p>
+								<a href="cart.php">
+									<span class="ti-shopping-cart"></span>
+									<p class="hover-text">to cart</p>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -202,8 +213,10 @@
 						<div class="prd-bottom">
 
 							<div class="social-info" id="item-3">
-								<span class="ti-shopping-cart"></span>
-								<p class="hover-text">to cart</p>
+								<a href="cart.php">
+									<span class="ti-shopping-cart"></span>
+									<p class="hover-text">to cart</p>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -221,8 +234,10 @@
 						<div class="prd-bottom">
 
 							<div class="social-info" id="item-4">
-								<span class="ti-shopping-cart"></span>
-								<p class="hover-text">to cart</p>
+								<a href="cart.php">
+									<span class="ti-shopping-cart"></span>
+									<p class="hover-text">to cart</p>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -240,8 +255,7 @@
 					<div class="single-footer-widget">
 						<h6>About Us</h6>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-							magna aliqua.
+							©Virtual House, 2019
 						</p>
 					</div>
 				</div>
@@ -530,8 +544,6 @@
 					renderer3.render(scene3, camera3);
 					renderer4.render(scene4, camera3);
 					renderer5.render(scene1, camera4);
-
-
 
 
 					if(typeof obj === "undefined"){
