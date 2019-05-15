@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Virtual House</title>
+
+    <!--
+            CSS
+            ============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="mainCart()">
+
+  <!-- Start Header Area -->
+	<header class="header_area sticky-header">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light main_box">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.php"><img src="img/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="nav-item active"><a href="cart.php" class="cart"><span class="ti-shopping-cart"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header Area -->
+
+    <!-- Start Banner Area -->
+    <section class="banner-area organic-breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+                <div class="col-first">
+                    <h1>Shopping Cart</h1>
+                    <nav class="d-flex align-items-center">
+                        <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="category.html">Cart</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Area -->
+
+    <!--================Cart Area =================-->
+    <section class="cart_area">
+        <div class="container">
+            <div class="cart_inner">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Cart Area =================-->
+
+    <!-- start footer Area -->
+  	<footer class="footer-area section_gap">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-lg-6  col-md-6 col-sm-6">
+  					<div class="single-footer-widget">
+  						<h6>About Us</h6>
+  						<p>
+  							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+  							magna aliqua.
+  						</p>
+  					</div>
+  				</div>
+  				<div class="col-lg-6 col-md-6 col-sm-6">
+  					<div class="single-footer-widget">
+  						<h6>Follow Us</h6>
+  						<p>Let us be social</p>
+  						<div class="footer-social d-flex align-items-center">
+  							<a href="#"><i class="fa fa-facebook"></i></a>
+  							<a href="#"><i class="fa fa-instagram"></i></a>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
+  	<!-- End footer Area -->
+
+  <script>
+    function mainCart() {
+      let table = ""
+      let items = JSON.parse(localStorage.getItem("items"));
+      let subtotal = 0
+      if (items !== null) {
+        console.log(items);
+        for (let i = 0; i < items.length; i++) {
+          table +=`
+            <tr>
+                <td>
+                    <div class="media">
+                        <div class="media-body">
+                            <p>${items[i].name}</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <h5>$${items[i].price.toFixed(2)}</h5>
+                </td>
+                <td>
+                    <div class="product_count">
+                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                            class="input-text qty">
+                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                    </div>
+                </td>
+                <td>
+                    <h5>$${items[i].price.toFixed(2)}</h5>
+                </td>
+            </tr>
+          `
+          subtotal += items[i].price
+        }
+        table += `
+          <tr class="bottom_button">
+              <td>
+
+              </td>
+              <td>
+
+              </td>
+              <td>
+                  <h5>Subtotal</h5>
+              </td>
+              <td style="min-width: 100px;">
+                  <h5>$${subtotal.toFixed(2)}</h5>
+              </td>
+          </tr>
+          <tr class="out_button_area">
+              <td>
+
+              </td>
+              <td>
+
+              </td>
+              <td>
+
+              </td>
+              <td>
+                  <div class="checkout_btn_inner d-flex align-items-center">
+                      <a class="gray_btn" href="#">Continue Shopping</a>
+                      <a class="primary-btn" href="#">Proceed to checkout</a>
+                  </div>
+              </td>
+          </tr>
+        `
+        document.getElementById("cartTable").innerHTML = table;
+				return null
+			}
+    }
+  </script>
+
+  <script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+    <script src="js/nouislider.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

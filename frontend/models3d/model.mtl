@@ -1,0 +1,37 @@
+# Export for compatibility
+
+newmtl flgrey
+illum 1
+Ka 0.2163 0.2163 0.2163
+Kd 0.5 0.5 0.5
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl ltgrey
+illum 2
+Ka 0.5 0.5 0.5
+Kd 0.3837 0.3837 0.3837
+Ks 0.5 0.5 0.5
+Ns 65.89
+
+newmtl flltbrown
+illum 1
+Ka 0.1306 0.0538 0.025
+Kd 0.2776 0.1143 0.0531
+Ks 0.0 0.0 0.0
+Ns 1.0
+
+newmtl sand_stone
+illum 3
+Ka 0.1299 0.1177 0.0998
+Kd 0.1256 0.1138 0.0965
+Ks 0.237 0.2147 0.1821
+Ns 60.0
+sharpness 60.0
+
+newmtl flwhite
+illum 2
+Ka 0.6449 0.6116 0.5447
+Kd 0.9837 0.9309 0.8392
+Ks 0.8082 0.729 0.5708
+Ns 128.0
